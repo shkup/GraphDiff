@@ -240,6 +240,7 @@ namespace RefactorThis.GraphDiff
         {
             Type baseType = type;
             while (baseType.BaseType != null &&
+                    !baseType.BaseType.IsAbstract &&
                    baseType.BaseType != typeof(object))
             {
                 baseType = baseType.BaseType;
